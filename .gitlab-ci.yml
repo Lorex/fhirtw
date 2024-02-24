@@ -1,0 +1,9 @@
+stages:
+  - deploy
+
+deploy_to_server:
+  stage: deploy
+  script:
+    - sshpass -p $DEPLOY_PASS ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "cd $DEPLOY_PATH && git pull origin main"
+  only:
+    - main
