@@ -1,0 +1,15 @@
+{
+  "name": "fhirtw",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "python3 -m http.server 8000 -d public",
+    "deploy": "cf deploy ./public"
+  },
+  "devDependencies": {
+    "cf": "1.0.0-rc.4"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}
